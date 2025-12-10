@@ -58,15 +58,20 @@ To run this project locally, you need Node.js, Python, and Docker installed.
 ### 1. Database Setup
 Start the PostgreSQL container:
 ```bash
-# Inside the root directory (or where docker-compose.yml is located)
+# Inside the root directory
 docker-compose up -d
+```
 
 ### 2. Data Population (Python)
+```bash
 cd python_backend
 python main.py
 python muzeum.py
 cd ..
+```
 
 ### 3. Frontend Setup
+```bash
 npm install
 npm run dev
+```
