@@ -1,0 +1,12 @@
+[
+  {
+    "icon": "public/markers/home_icon.png",
+    "title": "Home",
+    "loc": { "lat": 48.87, "lon": 2.35 }
+  },
+  {
+    "icon": "public/markers/work_icon.png",
+    "title": "Work",
+    "loc": { "lat": 48.87, "lon": 2.38 }
+  }
+]
