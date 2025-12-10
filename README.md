@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gdańsk Smart City Map
+
+> **Project created during the "Best Coding Marathon" Hackathon.**
+
+## About The Project
+This application is a Smart City prototype designed for the city of Gdańsk. It integrates statistical data, cultural events, and city infrastructure into a single interactive map. The goal was not only to visualize data but also to engage citizens by allowing them to propose changes to the urban space.
+
+The system combines a modern frontend with a robust data pipeline powered by Python and Dockerized PostgreSQL.
+
+---
+
+## Key Features
+
+### Interactive Dashboard
+* **Dynamic Map:** Built with **Leaflet**, featuring custom layers for city districts.
+* **District Analytics:** Clickable zones displaying key statistics (population density, service availability).
+
+### Real-Time Data & Infrastructure
+* **Cultural Events:** Latest events in Gdańsk, automatically scraped from external websites using **Python**.
+* **City Infrastructure:** Visualization of public spaces, parking lots, and cultural venues fetched via external APIs.
+
+### Citizen Engagement (Crowdsourcing)
+* **Interactive Suggestions:** Users can drop pins on the map to suggest new facilities (e.g., "We need a bench here").
+* **Community Driven:** Visualizes the needs of local residents in real-time.
+
+---
+
+## Tech Stack
+
+We used a microservices-oriented approach to separate data collection from the presentation layer.
+
+### Frontend
+* **Framework:** [Next.js](https://nextjs.org/) (React)
+* **Language:** TypeScript
+* **Maps:** Leaflet / React-Leaflet
+* **Styling:** CSS Modules
+
+### Backend & Data Pipeline
+* **Data Scraper:** Python (BeautifulSoup) - scrapes event data.
+* **Data Aggregation:** Python scripts fetching POI data (parking, culture) from external APIs.
+* **Database:** PostgreSQL
+* **DevOps:** Docker (containerized database instance).
+
+---
+
+## Architecture & Data Flow
+
+1.  **Data Ingestion:** Python scripts scrape event websites and query public APIs for infrastructure data.
+2.  **Storage:** Cleaned data is pushed to a **PostgreSQL** database running in a **Docker** container.
+3.  **Presentation:** The **Next.js** application fetches data from the database and renders it on the **Leaflet** map.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally, you need Node.js, Python, and Docker installed.
 
+### 1. Database Setup
+Start the PostgreSQL container:
 ```bash
+# Inside the root directory (or where docker-compose.yml is located)
+docker-compose up -d
+
+### 2. Data Population (Python)
+cd python_backend
+python main.py
+python muzeum.py
+cd ..
+
+### 3. Frontend Setup
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
