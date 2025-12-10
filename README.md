@@ -30,7 +30,7 @@ The system combines a modern frontend with a robust data pipeline powered by Pyt
 We used a microservices-oriented approach to separate data collection from the presentation layer.
 
 ### Frontend
-* **Framework:** [Next.js](https://nextjs.org/) (React)
+* **Framework:** [Next.js](https://nextjs.org/), React
 * **Language:** TypeScript
 * **Maps:** Leaflet / React-Leaflet
 * **Styling:** CSS Modules
