@@ -32,7 +32,7 @@ We used a microservices-oriented approach to separate data collection from the p
 ### Frontend
 * **Framework:** [Next.js](https://nextjs.org/), React
 * **Language:** TypeScript
-* **Maps:** Leaflet / React-Leaflet
+* **Maps:** React-Leaflet
 * **Styling:** CSS Modules
 
 ### Backend & Data Pipeline
@@ -75,3 +75,4 @@ cd ..
 npm install
 npm run dev
 ```
+Open http://localhost:3000 to view the map.

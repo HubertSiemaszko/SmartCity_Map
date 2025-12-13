@@ -2,17 +2,19 @@ import psycopg2
 import json
 from muzeum import json_str
 from main import json_str_events
-
+from dotenv import load_dotenv
 json_data = json.loads(json_str)
 json_data_events = json.loads(json_str_events)
 
 
+load_dotenv()
+
 conn = psycopg2.connect(
-    dbname="postgres",
-    user="admin",
-    password="admin",
-    host="172.16.177.20",
-    port=5432
+    dbname=os.getenv("DB_NAME"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASS"),
+    host=os.getenv("DB_HOST"),
+    port=os.getenv("DB_PORT")
 )
 
 cur = conn.cursor()
