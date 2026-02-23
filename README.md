@@ -14,6 +14,7 @@ The system combines a modern frontend with a robust data pipeline powered by Pyt
 <img src="https://github.com/user-attachments/assets/5eb79274-398a-4419-9073-3e13c71ac44e" width="400">
 <img src="https://github.com/user-attachments/assets/2cfa7b2b-64c9-4115-a406-f6d0f1071945" width="400">
 <img src="https://github.com/user-attachments/assets/0b3439ce-041f-4009-8614-aa25f92dd3c1" width="400">
+
 ## Key Features
 
 ### Interactive Dashboard
