@@ -8,8 +8,11 @@ This application is a Smart City prototype designed for the city of Gdańsk. It 
 The system combines a modern frontend with a robust data pipeline powered by Python and Dockerized PostgreSQL.
 
 ---
-![a8be594b-64b7-4350-89e3-7d09d5f20161](https://github.com/user-attachments/assets/0747f63a-aeb5-4170-9660-c77ee718e39f)
-![42bb57c9-eb2b-4578-97d0-63ef66346c92](https://github.com/user-attachments/assets/51da201d-91ee-404d-af24-0804d6494d7f)
+<img src="https://github.com/user-attachments/assets/0747f63a-aeb5-4170-9660-c77ee718e39f" width="400">
+<img src="https://github.com/user-attachments/assets/51da201d-91ee-404d-af24-0804d6494d7f" width="400">
+<img src="https://github.com/user-attachments/assets/54a44aa8-0613-4017-b280-85095d33552b" width="400">
+<img src="https://github.com/user-attachments/assets/5eb79274-398a-4419-9073-3e13c71ac44e" width="400">
+<img src="https://github.com/user-attachments/assets/2cfa7b2b-64c9-4115-a406-f6d0f1071945" width="400">
 
 ## Key Features
 
